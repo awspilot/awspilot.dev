@@ -6,31 +6,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link href='//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="/dynamodb-oop/stylesheets/stylesheet.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="/dynamodb-oop/stylesheets/print.css" media="print">
-	<link rel="stylesheet" type="text/css" href="/dynamodb-oop/stylesheets/tree.css">
-	<link rel="stylesheet" type="text/css" href="/dynamodb-oop/css/tabs.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/tree.css">
+	<link rel="stylesheet" type="text/css" href="/css/tabs.css">
 
 
 
 
 
-	<script src="/dynamodb-oop/js/libs/aws-sdk-2.282.1.min.js"></script>
-	<script src="/dynamodb-oop/js/libs/dynamodbjs.js"></script>
+	<script src="/js/libs/aws-sdk-2.282.1.min.js"></script>
+	<script src="/js/libs/dynamodbjs.js"></script>
 
 
 
 
-	<script src="/dynamodb-oop/js/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="/dynamodb-oop/js/tabs.js"></script>
-	<script src="/dynamodb-oop/js/libs/ace/1.2.6/ace.js"></script>
-	<script src="/dynamodb-oop/js/libs/ace/1.2.6/mode-javascript.js"></script>
-	<script src="/dynamodb-oop/js/libs/ace/1.2.6/mode-sql.js"></script>
-	<script src="/dynamodb-oop/js/libs/ace/1.2.6/mode-html.js"></script>
-	<script src="/dynamodb-oop/js/libs/ace/1.2.6/theme-twilight.js"></script>
-	<script src="/dynamodb-oop/js/libs/ace/1.2.6/theme-monokai.js"></script>
-	<script src="/dynamodb-oop/js/libs/ace/1.2.6/theme-textmate.js"></script>
-	<script src="/dynamodb-oop/js/libs/ace/1.2.6/theme-iplastic.js"></script>
+	<script src="/js/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="/js/tabs.js"></script>
+	<script src="/js/libs/ace/1.2.6/ace.js"></script>
+	<script src="/js/libs/ace/1.2.6/mode-javascript.js"></script>
+	<script src="/js/libs/ace/1.2.6/mode-sql.js"></script>
+	<script src="/js/libs/ace/1.2.6/mode-html.js"></script>
+	<script src="/js/libs/ace/1.2.6/theme-twilight.js"></script>
+	<script src="/js/libs/ace/1.2.6/theme-monokai.js"></script>
+	<script src="/js/libs/ace/1.2.6/theme-textmate.js"></script>
+	<script src="/js/libs/ace/1.2.6/theme-iplastic.js"></script>
 	<!-- <script src="https://rawgit.com/databank/ui-dynamodb/master/public/js/bundle.js"></script> -->
 
 
@@ -78,13 +78,13 @@
 
 	<label class="tree_label sub" for="treeops">Operations</label>
 	<ul>
-		<li><span class="tree_label"><a href="/dynamodb-oop/pages/insert/">Insert</a>
-		<li><span class="tree_label"><a href="/dynamodb-oop/pages/update/">Update</a>
-		<li><span class="tree_label"><a href="/dynamodb-oop/pages/replace/">Replace</a>
-		<li><span class="tree_label"><a href="/dynamodb-oop/pages/delete/">Delete</a>
-		<li><span class="tree_label"><a href="/dynamodb-oop/pages/get/">Get</a>
-		<li><span class="tree_label"><a href="/dynamodb-oop/pages/query/">Query</a>
-		<li><span class="tree_label"><a href="/dynamodb-oop/pages/scan/">Scan</a>
+		<li><span class="tree_label"><a href="/pages/insert/">Insert</a>
+		<li><span class="tree_label"><a href="/pages/update/">Update</a>
+		<li><span class="tree_label"><a href="/pages/replace/">Replace</a>
+		<li><span class="tree_label"><a href="/pages/delete/">Delete</a>
+		<li><span class="tree_label"><a href="/pages/get/">Get</a>
+		<li><span class="tree_label"><a href="/pages/query/">Query</a>
+		<li><span class="tree_label"><a href="/pages/scan/">Scan</a>
 	</ul>
 -->
 
@@ -94,51 +94,51 @@
 <ul class="tree">
 	<li>
 		<input type="checkbox" id="awspilot" checked />
-		<label class="tree_label sub" for="awspilot"><img src="/dynamodb-oop/images/folder_flat.png"/> @awspilot</label>
+		<label class="tree_label sub" for="awspilot"><img src="/images/folder_flat.png"/> @awspilot</label>
 		<ul>
 			<li>
 				<input type="checkbox" id="dynamodb" checked />
-				<label class="tree_label sub" for="dynamodb"><img src="/dynamodb-oop/images/folder_flat.png"/> dynamodb</label>
+				<label class="tree_label sub" for="dynamodb"><img src="/images/folder_flat.png"/> dynamodb</label>
 				<ul>
-					<li><span class="tree_label"><a href="/dynamodb-oop/"> <img src="/dynamodb-oop/images/text.png"/> README.md</a></span>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/apidef/"> <img src="/dynamodb-oop/images/text.png"/> API_REF.md</a></span>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/sql/"> <img src="/dynamodb-oop/images/text.png"/> SQL.md </a>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/changelog/"> <img src="/dynamodb-oop/images/text.png"/> ChangeLog.md</a>
+					<li><span class="tree_label"><a href="/"> <img src="/images/text.png"/> README.md</a></span>
+					<li><span class="tree_label"><a href="/pages/apidef/"> <img src="/images/text.png"/> API_REF.md</a></span>
+					<li><span class="tree_label"><a href="/pages/sql/"> <img src="/images/text.png"/> SQL.md </a>
+					<li><span class="tree_label"><a href="/pages/changelog/"> <img src="/images/text.png"/> ChangeLog.md</a>
 
 
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/create-table/"> <img src="/dynamodb-oop/images/code.png"/> create_table.js</a>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/insert/"> <img src="/dynamodb-oop/images/code.png"/> insert.js</a>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/insert-or-update/"> <img src="/dynamodb-oop/images/code.png"/> insert_or_update.js</a>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/insert-or-replace/"> <img src="/dynamodb-oop/images/code.png"/> insert_or_replace.js</a>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/batch-insert/"> <img src="/dynamodb-oop/images/code.png"/> batch_insert.js</a>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/update/"> <img src="/dynamodb-oop/images/code.png"/> update.js </a>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/replace/"> <img src="/dynamodb-oop/images/code.png"/> replace.js</a>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/delete/"> <img src="/dynamodb-oop/images/code.png"/> delete.js</a>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/get/"> <img src="/dynamodb-oop/images/code.png"/> get.js</a>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/query/"> <img src="/dynamodb-oop/images/code.png"/> query.js </a>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/scan/"> <img src="/dynamodb-oop/images/code.png"/> scan.js </a>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/drop-index/"> <img src="/dynamodb-oop/images/code.png"/> drop_index.js </a>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/drop-table/"> <img src="/dynamodb-oop/images/code.png"/> drop_table.js </a>
+					<li><span class="tree_label"><a href="/pages/create-table/"> <img src="/images/code.png"/> create_table.js</a>
+					<li><span class="tree_label"><a href="/pages/insert/"> <img src="/images/code.png"/> insert.js</a>
+					<li><span class="tree_label"><a href="/pages/insert-or-update/"> <img src="/images/code.png"/> insert_or_update.js</a>
+					<li><span class="tree_label"><a href="/pages/insert-or-replace/"> <img src="/images/code.png"/> insert_or_replace.js</a>
+					<li><span class="tree_label"><a href="/pages/batch-insert/"> <img src="/images/code.png"/> batch_insert.js</a>
+					<li><span class="tree_label"><a href="/pages/update/"> <img src="/images/code.png"/> update.js </a>
+					<li><span class="tree_label"><a href="/pages/replace/"> <img src="/images/code.png"/> replace.js</a>
+					<li><span class="tree_label"><a href="/pages/delete/"> <img src="/images/code.png"/> delete.js</a>
+					<li><span class="tree_label"><a href="/pages/get/"> <img src="/images/code.png"/> get.js</a>
+					<li><span class="tree_label"><a href="/pages/query/"> <img src="/images/code.png"/> query.js </a>
+					<li><span class="tree_label"><a href="/pages/scan/"> <img src="/images/code.png"/> scan.js </a>
+					<li><span class="tree_label"><a href="/pages/drop-index/"> <img src="/images/code.png"/> drop_index.js </a>
+					<li><span class="tree_label"><a href="/pages/drop-table/"> <img src="/images/code.png"/> drop_table.js </a>
 
 
 
 					<li>
 						<input type="checkbox" id="misc" checked />
-						<label class="tree_label sub" for="misc"><img src="/dynamodb-oop/images/folder_flat.png"/> Misc</label>
+						<label class="tree_label sub" for="misc"><img src="/images/folder_flat.png"/> Misc</label>
 						<ul>
-							<li><span class="tree_label"><a href="/dynamodb-oop/pages/empty-strings/"> <img src="/dynamodb-oop/images/text.png"/> empty_strings.md</a>
-							<li><span class="tree_label"><a href="/dynamodb-oop/pages/datatypes/"> <img src="/dynamodb-oop/images/text.png"/> data_types.md</a>
-							<li><span class="tree_label"><a href="/dynamodb-oop/pages/deprecated/"> <img src="/dynamodb-oop/images/text.png"/> deprecated.md</a>
-							<li><span class="tree_label"><a href="/dynamodb-oop/pages/test/"> <img src="/dynamodb-oop/images/text.png"/> test.md</a><span>
+							<li><span class="tree_label"><a href="/pages/empty-strings/"> <img src="/images/text.png"/> empty_strings.md</a>
+							<li><span class="tree_label"><a href="/pages/datatypes/"> <img src="/images/text.png"/> data_types.md</a>
+							<li><span class="tree_label"><a href="/pages/deprecated/"> <img src="/images/text.png"/> deprecated.md</a>
+							<li><span class="tree_label"><a href="/pages/test/"> <img src="/images/text.png"/> test.md</a><span>
 						</ul>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/disqus/"> <img src="/dynamodb-oop/images/text.png"/> Disqus.md</a></span>
+					<li><span class="tree_label"><a href="/pages/disqus/"> <img src="/images/text.png"/> Disqus.md</a></span>
 				</ul>
 			<li>
 				<input type="checkbox" id="dynamodbui" checked />
-				<label class="tree_label sub" for="dynamodbui"><img src="/dynamodb-oop/images/folder_flat.png"/> dynamodb-ui</label>
+				<label class="tree_label sub" for="dynamodbui"><img src="/images/folder_flat.png"/> dynamodb-ui</label>
 				<ul>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/ui-readme/"> <img src="/dynamodb-oop/images/text.png"/> README.md</a></span>
-					<li><span class="tree_label"><a href="/dynamodb-oop/pages/ui-demo/"> <img src="/dynamodb-oop/images/text.png"/> DEMO.md</a></span>
+					<li><span class="tree_label"><a href="/pages/ui-readme/"> <img src="/images/text.png"/> README.md</a></span>
+					<li><span class="tree_label"><a href="/pages/ui-demo/"> <img src="/images/text.png"/> DEMO.md</a></span>
 
 		</ul>
 	</li>
