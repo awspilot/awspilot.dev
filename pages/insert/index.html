@@ -154,7 +154,7 @@
 				new NumberSet( [  111 , 222 , 333  ] ),
 				new BinarySet( [ Buffer.from('aXRlbTE=','base64') ]), 
 			],
-			map = { 
+			object = { 
 				string: 's', 
 				number: 1,
 				null: null,
@@ -189,8 +189,6 @@
 
 <div class="code rw wide textmate" id="tab3" style="position: absolute;top: 49px;left: 0px;right: 0px;bottom: 0px;z-index: 1;">
 
-	// insert using VALUES does not currently support StringSet or NumberSet
-	// WARN: use schema() to prevent describeTable call
 	DynamoDB.query(`
 
 			INSERT INTO tbl_name VALUES ({
@@ -204,8 +202,29 @@
 				updated_at    : null,
 				bin           : Buffer.from('4oya', 'base64'),
 
-				a_list        : [ 'alpha', 'beta', 'gamma', 1, null, true ],
-				a_map         : { 'string': 's', 'number': 1 },
+				array : [ 
+					'text', 
+					1, 
+					null, 
+					true,
+					Buffer.from('aXRlbTE=', 'base64'),
+					{ nested_object: true },
+					['nested_array'],
+					new StringSet( [ 'sss','bbb','ccc' ] ),
+					new NumberSet( [  111 , 222 , 333  ] ),
+					new BinarySet( [ Buffer.from('aXRlbTE=','base64') ]), 
+				],
+				object : { 
+					string: 's', 
+					number: 1,
+					null: null,
+					boolean: true,
+					"me-too": "JSON key names can be enclosed in quotes", 
+					binary: Buffer.from('aXRlbTE=', 'base64'),
+					ss : new StringSet( [ 'sss','bbb','ccc' ] ),
+					ns : new NumberSet( [  111 , 222 , 333  ] ),
+					bs : new BinarySet( [ Buffer.from('aXRlbTE=','base64') ]),
+				},
 
 				ss            :  new StringSet( [ 'sss','bbb','ccc' ] ),
 				ns            :  new NumberSet( [  111 , 222 , 333  ] ),
