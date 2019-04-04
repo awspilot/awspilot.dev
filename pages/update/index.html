@@ -124,17 +124,34 @@
 
 			days_left      += -1,
 
-			the_list        = ['a',1,true, null, {}, [] ],
-			the_map         = {
-				nonkeyword    : 'value1',
-				"sqlkeyword1" : 'value2',
-				'sqlkeyword2' : 'value3'
+			array = [
+				'hello' + " " + "world", 
+				1+2.14, 
+				null, 
+				true,
+				Buffer.from('aXRlbTE=', 'base64'),
+				{ nested_object: true },
+				['nested_array'],
+				new StringSet( [ 'sss','bbb','ccc' ] ),
+				new NumberSet( [  111 , 222 , 333  ] ),
+				new BinarySet( [ Buffer.from('aXRlbTE=','base64') ]), 
+			],
+			object = {
+				string: 's', 
+				number: 1,
+				null: null,
+				boolean: true,
+				"me-too": "JSON key names can be enclosed in quotes", 
+				binary: Buffer.from('aXRlbTE=', 'base64'),
+				ss : new StringSet( [ 'sss','bbb','ccc' ] ),
+				ns : new NumberSet( [  111 , 222 , 333  ] ),
+				bs : new BinarySet( [ Buffer.from('aXRlbTE=','base64') ]),
 			},
 
 
 			tags            = new StringSet(['dev','nodejs']),
-			lucky_numbers   = new NumberSet([ 12, 23 ]),
-			bins            = new BinarySet([ Buffer.from('aXRlbTE=','base64') ]),
+			lucky_numbers   = new NumberSet([ 12, 3.14 ]),
+			bs              = new BinarySet([ Buffer.from('aXRlbTE=','base64') ]),
 
 			updated_at    = new Date().getTime(),
 			expire_at     = Math.round( (new Date().getTime() / 1000) + 60*60*24  )
