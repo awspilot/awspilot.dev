@@ -1,5 +1,10 @@
 <div class="content">
 
+<h1>@1.3.0</h1>
+1.3.0+ will follow SemVer (major.minor.patch) and increment "minor" for new features <br>
+JSON keys in SQL can now be keywords without the need of wrapping: eg. { "keyword": 1 } can now be just { keyword: 1 }<br>
+
+
 <h1>@1.2.11</h1>
 SQL LIST and MAP support nested StringSet, NumberSet, BinarySet and Binary<br>
 SQL support insert/update BinarySet data type (BS) using Buffer.from( &lt;STRING>, 'base64')<br>
