@@ -120,17 +120,17 @@
 
 <div class="code rw wide textmate" id="tab2" style="position: absolute;top: 49px;left: 0px;right: 0px;bottom: 0px;z-index: 1;">
 
-	/*
-	SQL keywords must be enclosed in "`", JSON key names can be enclosed in quotes
-	if no callback is supplied, promise is returned
-	new Date() is evaluated to String or Number when parsed
-	
-	WARNING:
-		INSERT statement does not replace or update if item exists 
-		to prevent replacing or updating, awspilot needs to know the key schema
-		and will make an extra call to describeTable
-		use schema() to prevent the extra describeTable call
-	*/
+
+	// SQL keywords must be enclosed in "`", JSON key names can be enclosed in quotes
+	// if no callback is supplied, promise is returned
+	// new Date() is evaluated to String or Number when parsed
+	// 
+	// WARNING:
+	//    INSERT statement does not replace or update if an item with the same key exists 
+	//    to prevent replacing or updating, awspilot needs to know the key schema
+	//    and will make an extra call to describeTable
+	//    use schema() to prevent the extra describeTable call
+
 	DynamoDB.query(`
 
 		INSERT INTO tbl_name SET
