@@ -121,7 +121,7 @@
 <div class="code rw wide textmate" id="tab2" style="position: absolute;top: 49px;left: 0px;right: 0px;bottom: 0px;z-index: 1;">
 
 
-	// SQL keywords must be enclosed in "`", JSON key names can be enclosed in quotes
+	// SQL keywords must be enclosed in "`", 
 	// if no callback is supplied, promise is returned
 	// new Date() is evaluated to String or Number when parsed
 	// 
@@ -142,8 +142,29 @@
 			updated_at    = null,
 			binary        = Buffer.from('4oya', 'base64'),
 
-			list          = [ 'alpha', 'beta', 'gamma', 1, null, true ],
-			map           = { 'string': 's', 'number': 1 },
+			array = [ 
+				'text', 
+				1, 
+				null, 
+				true,
+				Buffer.from('aXRlbTE=', 'base64'),
+				{ nested_object: true },
+				['nested_array'],
+				new StringSet( [ 'sss','bbb','ccc' ] ),
+				new NumberSet( [  111 , 222 , 333  ] ),
+				new BinarySet( [ Buffer.from('aXRlbTE=','base64') ]), 
+			],
+			map = { 
+				string: 's', 
+				number: 1,
+				null: null,
+				boolean: true,
+				"me-too": "JSON key names can be enclosed in quotes", 
+				binary: Buffer.from('aXRlbTE=', 'base64'),
+				ss : new StringSet( [ 'sss','bbb','ccc' ] ),
+				ns : new NumberSet( [  111 , 222 , 333  ] ),
+				bs : new BinarySet( [ Buffer.from('aXRlbTE=','base64') ]),
+			},
 
 			ss            =  new StringSet( [ 'sss','bbb','ccc' ] ),
 			ns            =  new NumberSet( [  111 , 222 , 333  ] ),
