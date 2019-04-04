@@ -136,15 +136,18 @@
 		INSERT INTO tbl_name SET
 			partition_key = uuid('account-######-######'),
 			sort_key      = 'test@test.com',
+
 			password      = 'qwert',
-			bool          = true,
-			one           = Math.round( 3.14 ) - 2,
+			welcome       = "hello" + " " + "world",
+			boolean       = true,
+			number        = Math.round( 3.14 ) - 2,
 			updated_at    = null,
 			binary        = Buffer.from('4oya', 'base64'),
 
+
 			array = [ 
-				'text', 
-				1, 
+				'hello' + " " + "world", 
+				1+2.14, 
 				null, 
 				true,
 				Buffer.from('aXRlbTE=', 'base64'),
