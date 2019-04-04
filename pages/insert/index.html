@@ -189,6 +189,9 @@
 
 <div class="code rw wide textmate" id="tab3" style="position: absolute;top: 49px;left: 0px;right: 0px;bottom: 0px;z-index: 1;">
 
+	// If only one item is specified for VALUES, awspilot will make a putItem request
+	// if more items in VALUES, batchWriteItem will be performed
+
 	DynamoDB.query(`
 
 			INSERT INTO tbl_name VALUES ({
