@@ -33,29 +33,26 @@
 	
 	
 	<h3>Endpoints</h3>
-	
-	
 
+	<h4>DynamoDB</h4>
 
-<h4>DynamoDB</h4>
+	DynamoDB-local server uses **accessKey** as a **namespace** ( different access keys see different tables )  
+	<div class="code console iplastic">
+		endpoint: "http://localhost:8000/"
+		accessKeyId: "myKeyId"
+		secretAccessKey: "whatever"
+	</div>
 
-DynamoDB-local server uses **accessKey** as a **namespace** ( different access keys see different tables )  
-<div class="code console iplastic">
-	endpoint: "http://localhost:8000/"
-	accessKeyId: "myKeyId"
-	secretAccessKey: "whatever"
-</div>
+	<h4>S3</h4>
+	Fake s3 server (S3rver) is included, with local filesystem as storage
 
-<h4>S3</h4>
-Fake s3 server (S3rver) is included, with local filesystem as storage
-
-<div class="code console iplastic">
-	endpoint: "http://localhost/v1/s3"
-	accessKeyId: "S3RVER"
-	secretAccessKey: "S3RVER"
-	sslEnabled: false
-	s3ForcePathStyle: true
-</div>
+	<div class="code console iplastic">
+		endpoint: "http://localhost/v1/s3"
+		accessKeyId: "S3RVER"
+		secretAccessKey: "S3RVER"
+		sslEnabled: false
+		s3ForcePathStyle: true
+	</div>
 
 
 	
