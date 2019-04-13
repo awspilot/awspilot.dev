@@ -34,7 +34,7 @@
 	
 	<h3>Endpoints</h3>
 
-	<h4>DynamoDB</h4>
+	<b>DynamoDB</b>
 
 	DynamoDB-local server uses **accessKey** as a **namespace** ( different access keys see different tables )  
 	<div class="code console iplastic">
@@ -43,7 +43,7 @@
 		secretAccessKey: "whatever"
 	</div>
 
-	<h4>S3</h4>
+	<b>S3</b>
 	Fake s3 server (S3rver) is included, with local filesystem as storage
 
 	<div class="code console iplastic">
