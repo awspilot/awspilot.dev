@@ -14,6 +14,8 @@
 	<p>
 		The docker version is based on Amazon Linux 2 and includes:
 		<li> <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html" target="_blank">DynamoDB local</a>
+		<li> <a href="https://github.com/jamhall/s3rver" target="_blank">Fake S3 Server ( with local filesystem storage )</a>
+
 		<li> NodeJS and a basic NodeJS http server to serve static files and proxy dynamodb calls
 		<li> dynamodb-ui
 	</p>
@@ -26,7 +28,7 @@
 	<br>
 	For persistent storage use:<br>
 	<div class="code console iplastic">
-	docker run -p 8000:8000 -p 80:80 -v storage-volume:/var/dynamo -d  awspilotcom/dynamodb-ui
+	docker run -p 8000:8000 -p 80:80 -v storage-volume:/storage -d  awspilotcom/dynamodb-ui
 	</div>
 </div>
 </section> </div> <script>$(function() {
