@@ -81,14 +81,14 @@
 	// or multiple arguments .select( 'attr1' , 'attr2' )
 	DynamoDB
 		.table('demo_table_hash_range')
-		.select(['partitionKey','sortKey','object.attribute','array[0]','array[3]','object.attribute'])
+		.select(['partitionKey','sortKey','nested_object.nested_attribute','array_mixed[1]','array_mixed[5].key'])
 		.addSelect('created_at')
 		.where('partitionKey').eq('foo.bar')
 		.descending()
-		.limit(10)
+		.limit(2)
 		.consistent_read()
 		.query(function(err, data, raw ) {
-			console.log( "lastEvaluatedKey = ",this.lastEvaluatedKey )
+			console.log( "LastEvaluatedKey = ",this.LastEvaluatedKey )
 			console.log( err, data )
 			console.log( "raw data ", raw )
 		});
