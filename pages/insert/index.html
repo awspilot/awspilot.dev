@@ -200,9 +200,9 @@
 
 	DynamoDB.query(`
 
-			INSERT INTO tbl_name VALUES ({
-				primary_key   : 'domain.com',
-				sort_key      : 'test@domain.com',
+			INSERT INTO demo_table_hash_range VALUES ({
+				primaryKey   : 'domain.com',
+				sortKey      : 99,
 
 				email         : 'test@test.com',
 				password      : 'qwert',
