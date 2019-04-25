@@ -160,7 +160,7 @@
 		.having('attribute').in([3,4,'a'])
 		.filter('fridge.shelf[1].cookies').not_contains('sugar')
 		.query(function( err, data ) {
-			 console.log(err,data)
+			console.log(err,data)
 		})
 
 </div>
@@ -178,16 +178,16 @@
 			.index('country-index')
 			.where('country').eq('Canada')
 			.resume($lastKey)
-			.limit(10)
+			.limit(10) // 10 by 10 items for this demo
 			.query(function( err, data ) {
 				if (err)
 					return console.log(err)
 
-				console.log("fetched items ", data.length )
+				console.log("fetched cities in Canada: ", data.length )
 
 				if (this.LastEvaluatedKey === null) {
 					// reached end, do a callback() maybe
-					console.log('---- finished ---')
+					console.log('---- reached end of Canada :) ---')
 					return;
 				}
 
