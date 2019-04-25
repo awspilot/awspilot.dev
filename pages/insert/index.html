@@ -201,7 +201,7 @@
 	DynamoDB.query(`
 
 			INSERT INTO demo_table_hash_range VALUES ({
-				primaryKey   : 'domain.com',
+				partitionKey   : 'domain.com',
 				sortKey      : 99,
 
 				email         : 'test@test.com',
