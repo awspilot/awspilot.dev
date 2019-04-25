@@ -359,12 +359,15 @@ execute_code = function(code) {
 		;
 		(function(code) {
 
-			var ddb = new window.AWS.DynamoDB({ endpoint: 'https://djaorxfotj9hr.cloudfront.net', region: 'us-east-1', credentials: { accessKeyId: 'myKeyId', secretAccessKey: 'y'} })
+			var ddb = new window.AWS.DynamoDB({ endpoint: 'https://djaorxfotj9hr.cloudfront.net/v1/dynamodb', region: 'us-east-1', credentials: { accessKeyId: 'myKeyId', secretAccessKey: 'y'} })
 
 			DynamoDB = new window['@awspilot/dynamodb'](ddb)
 			var origainal_cl = console.log;
 			console.log = function() {
 				[].slice.apply(arguments).map(function(argument) {
+					if (typeof argument === "object")
+						return editor.setValue(editor.getValue() + JSON.stringify(argument,null,"\t") + ' ',-1)
+
 					editor.setValue(editor.getValue() + argument + ' ',-1)
 				})
 				editor.setValue(editor.getValue() + "\n" ,-1)
