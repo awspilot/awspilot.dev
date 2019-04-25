@@ -319,53 +319,9 @@ describe_code = function(code) {
 
 		(function(code) {
 
-			var fakedynamo = {
-				config: {dynamoDbCrc32: true,},
-				describeTable: function( params ,callback) {
-					editor.setValue( editor.getValue() + "\n\tdescribeTable\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
-					callback(null, {
-						Table: {
-							KeySchema: [
-								{AttributeName: 'partition_key', KeyType: 'HASH' },
-								{AttributeName: 'sort_key', KeyType: 'RANGE' }
-							]
-						}
-					})
-				},
+			var ddb = new window.AWS.DynamoDB({ endpoint: 'https://djaorxfotj9hr.cloudfront.net', region: 'us-east-1', credentials: { accessKeyId: 'myKeyId', secretAccessKey: 'y'} })
 
-				createTable: function( params ,callback) {
-					editor.setValue(editor.getValue() + "\n\tcreateTable\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
-				},
-				updateTable: function( params ,callback) {
-					editor.setValue(editor.getValue() + "\n\tupdateTable\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
-				},
-				putItem: function( params ,callback) {
-					editor.setValue(editor.getValue() + "\n\tputItem\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
-				},
-				updateItem: function( params ,callback) {
-					editor.setValue(editor.getValue() + "\n\tupdateItem\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
-				},
-				batchWriteItem: function( params ,callback) {
-					editor.setValue(editor.getValue() + "\n\tbatchWriteItem\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
-				},
-				deleteItem: function( params ,callback) {
-					editor.setValue(editor.getValue() + "\n\tdeleteItem\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
-				},
-				getItem: function( params ,callback) {
-					editor.setValue(editor.getValue() + "\n\tgetItem\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
-				},
-				query: function( params ,callback) {
-					editor.setValue(editor.getValue() + "\n\tquery\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
-				},
-				scan: function( params ,callback) {
-					editor.setValue(editor.getValue() + "\n\tscan\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
-				},
-				deleteTable: function( params ,callback) {
-					editor.setValue(editor.getValue() + "\n\tdeleteTable\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
-				},
-
-			}
-			DynamoDB = new window['@awspilot/dynamodb'](fakedynamo)
+			DynamoDB = new window['@awspilot/dynamodb'](ddb)
 			var origainal_cl = console.log;
 			console.log = function() {
 				[].slice.apply(arguments).map(function(argument) {
