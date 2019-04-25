@@ -160,7 +160,7 @@
 		.having('attribute').in([3,4,'a'])
 		.filter('fridge.shelf[1].cookies').not_contains('sugar')
 		.query(function( err, data ) {
-
+			 console.log(err,data)
 		})
 
 </div>
@@ -173,24 +173,30 @@
 	// Query continue from last item
 	// query a table until the end of results :)
 	(function recursive_call( $lastKey ) {
-	    DynamoDB
-	        .table('messages')
-	        .where('to').eq('user1@test.com')
-	        .resume($lastKey)
-	        .query(function( err, data ) {
-	            // handle error, process data ...
+		DynamoDB
+			.table('cities')
+			.index('country-index')
+			.where('country').eq('Canada')
+			.resume($lastKey)
+			.limit(10)
+			.query(function( err, data ) {
+				if (err)
+					return console.log(err)
 
-	            if (this.LastEvaluatedKey === null) {
-	                // reached end, do a callback() maybe
-	                return;
-	            }
+				console.log("fetched items ", data.length )
 
-	            var $this = this;
-	            setTimeout(function() {
-	                recursive_call($this.LastEvaluatedKey);
-	            },1000);
+				if (this.LastEvaluatedKey === null) {
+					// reached end, do a callback() maybe
+					console.log('---- finished ---')
+					return;
+				}
 
-	        })
+				var $this = this;
+				setTimeout(function() {
+					recursive_call($this.LastEvaluatedKey);
+				},100);
+
+			})
 	})(null);
 
 </div>
