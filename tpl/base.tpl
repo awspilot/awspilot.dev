@@ -15,7 +15,7 @@
 
 
 
-	<script src="/js/libs/aws-sdk-2.282.1.min.js"></script>
+	<script src="/js/libs/aws-sdk-2.442.0.min.js"></script>
 	<script src="/js/libs/dynamodbjs.js"></script>
 
 
@@ -222,6 +222,11 @@ $(function() {
 			return;
 		describe_code(ace.edit($('.activeTab').attr('id')).getValue())
 	})
+	$('.btn-execute').on('click', function() {
+		if ($(this).hasClass('disabled'))
+			return;
+		execute_code(ace.edit($('.activeTab').attr('id')).getValue())
+	})
 });
 </script>
 
@@ -297,6 +302,34 @@ describe_code = function(code) {
 	}, 500)
 
 }
+
+
+
+execute_code = function(code) {
+	var editor = ace.edit('result-out')
+	editor.setValue('')
+	setTimeout(function() {
+		;
+		(function(code) {
+
+			var ddb = new window.AWS.DynamoDB({ endpoint: 'https://djaorxfotj9hr.cloudfront.net', region: 'us-east-1', credentials: { accessKeyId: 'myKeyId', secretAccessKey: 'y'} })
+
+			DynamoDB = new window['@awspilot/dynamodb'](ddb)
+			var origainal_cl = console.log;
+			console.log = function() {
+				[].slice.apply(arguments).map(function(argument) {
+					editor.setValue(editor.getValue() + argument + ' ',-1)
+				})
+				editor.setValue(editor.getValue() + "\n" ,-1)
+			}
+			eval(code)
+
+		})(code)
+
+	}, 500)
+
+}
+
 
 // describe_code(ace.edit($('.activeTab').attr('id')).getValue())
 </script>
