@@ -56,12 +56,14 @@
 	// Insert Item ( no update )
 	// WARN: use schema() to prevent describeTable call
 	DynamoDB
-		.table('tbl_name')
+		.table('demo_table_hash_range')
 		.insert({
 
 			// carefull though as foo.bar domain actually exists :)
-			partition_key: 'foo.bar',
-			sort_key: 'baz@foo.bar',
+			partitionKey: 'foo.bar',
+			sortKey: 1,
+
+			email: 'baz@foo.bar',
 
 			password: 'qwert',
 			boolean: true,
@@ -111,7 +113,7 @@
 				}
 			}
 		}, function(err,data) {
-
+			console.log( err, data )
 		});
 </div>
 
@@ -133,10 +135,11 @@
 
 	DynamoDB.query(`
 
-		INSERT INTO tbl_name SET
-			partition_key = uuid('account-######-######'),
-			sort_key      = 'test@test.com',
+		INSERT INTO demo_table_hash_range SET
+			partitionKey = uuid('account-######-######'),
+			sortKey      = 33,
 
+			email         = 'test@test.com',
 			password      = 'qwert',
 			welcome       = "hello" + " " + "world",
 			boolean       = true,
@@ -197,9 +200,9 @@
 
 	DynamoDB.query(`
 
-			INSERT INTO tbl_name VALUES ({
-				primary_key   : 'domain.com',
-				sort_key      : 'test@domain.com',
+			INSERT INTO demo_table_hash_range VALUES ({
+				partitionKey   : 'domain.com',
+				sortKey      : 99,
 
 				email         : 'test@test.com',
 				password      : 'qwert',
@@ -250,7 +253,7 @@
 <div class="split-result">
 	<div class="" style="position: absolute;top: 0px;left: 0px;right: 0px;height: 40px;background-color: #f0f0f0;padding: 0px 50px;">
 		<a class='btn btn-describe'> Describe </a>
-		<a class='btn disabled'> Execute </a>
+		<a class='btn btn-execute'> Execute </a>
 	</div>
 	<div class="" style="position: absolute;top: 40px;left: 0px;right: 0px;bottom: 0px;border-top: 1px solid #ccc;">
 		<div id="result-out" class="code wide textmate" style="position: absolute;top: 0px;left: 0px;right: 0px;bottom: 0px;"></div>

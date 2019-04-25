@@ -38,18 +38,18 @@
 	// THROUGHPUT is optional, defaults to 1 1
 	// if PAY_PER_REQUEST is used, THROUGHPUT is ignored by AWS
 	DynamoDB.query(`
-		CREATE PROVISIONED TABLE tbl_name (
-			pKey STRING,
+		CREATE PROVISIONED TABLE demo_table_hash_range (
+			partitionKey STRING,
 			altKey STRING,
-			sKey NUMBER,
+			sortKey NUMBER,
 			sBin BINARY,
-			PRIMARY KEY ( pKey, sKey ) THROUGHPUT 999 99 ,
+			PRIMARY KEY ( partitionKey, sortKey ) THROUGHPUT 999 99 ,
 			INDEX table      GSI ( altKey ) PROJECTION ALL THROUGHPUT 1 1 ,
-			INDEX mykeys     GSI ( altKey, sKey ) PROJECTION KEYS_ONLY THROUGHPUT 2 2,
+			INDEX mykeys     GSI ( altKey, sortKey ) PROJECTION KEYS_ONLY THROUGHPUT 2 2,
 			INDEX myinclude  GSI ( altKey, sBin ) PROJECTION INCLUDE ( hash, range ) THROUGHPUT 3 3,
-			INDEX lsiall     LSI ( pKey, sKey ) PROJECTION ALL,
-			INDEX lsikeys    LSI ( pKey, sKey ) PROJECTION KEYS_ONLY,
-			INDEX lsiinclude LSI ( pKey, sBin ) PROJECTION INCLUDE ( attr1, attr2 )
+			INDEX lsiall     LSI ( partitionKey, sortKey ) PROJECTION ALL,
+			INDEX lsikeys    LSI ( partitionKey, sortKey ) PROJECTION KEYS_ONLY,
+			INDEX lsiinclude LSI ( partitionKey, sBin ) PROJECTION INCLUDE ( attr1, attr2 )
 		)
 	`, function(err,data) {
 		console.log( err, "\n", data )

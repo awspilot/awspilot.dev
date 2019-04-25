@@ -80,15 +80,17 @@
 	// you can pass an Array to .select( ['attr1', 'attr2'] )
 	// or multiple arguments .select( 'attr1' , 'attr2' )
 	DynamoDB
-		.table('statistics')
-		.select(['unique_visitors','unique_pageviews','object.attribute','array[0]','array[3]','object.attribute'])
-		.addSelect('forgotten')
-		.where('domain').eq('mydomain.com')
+		.table('demo_table_hash_range')
+		.select(['partitionKey','sortKey','nested_object.nested_attribute','array_mixed[1]','array_mixed[5].key'])
+		.addSelect('created_at')
+		.where('partitionKey').eq('foo.bar')
 		.descending()
-		.limit(10)
+		.limit(2)
 		.consistent_read()
-		.query(function(err, data ) {
-
+		.query(function(err, data, raw ) {
+			console.log( "LastEvaluatedKey = ",this.LastEvaluatedKey )
+			console.log( err, data )
+			console.log( "raw data ", raw )
 		});
 
 </div>
@@ -100,13 +102,17 @@
 	// Query an Index
 	// return all attributes including non-projected ( LSI only )
 	DynamoDB
-		.table('messages')
-		.index('starredIndex')
+		.table('cities')
+		.index('country-index')
 		.select( DynamoDB.ALL )
-		.where('to').eq('user1@test.com')
-		.descending()
-		.query(function( err, data ) {
-
+		.where('country').eq('Canada')
+		//.descending()
+		.limit(10)
+		//.consistent_read()
+		.query(function( err, data, raw ) {
+			console.log( "LastEvaluatedKey = ",this.LastEvaluatedKey )
+			console.log( err, data )
+			console.log( "raw data ", raw )
 		});
 
 	// NOTE: specifying non-projected fields in select() will:
@@ -154,7 +160,7 @@
 		.having('attribute').in([3,4,'a'])
 		.filter('fridge.shelf[1].cookies').not_contains('sugar')
 		.query(function( err, data ) {
-
+			console.log(err,data)
 		})
 
 </div>
@@ -167,24 +173,30 @@
 	// Query continue from last item
 	// query a table until the end of results :)
 	(function recursive_call( $lastKey ) {
-	    DynamoDB
-	        .table('messages')
-	        .where('to').eq('user1@test.com')
-	        .resume($lastKey)
-	        .query(function( err, data ) {
-	            // handle error, process data ...
+		DynamoDB
+			.table('cities')
+			.index('country-index')
+			.where('country').eq('Canada')
+			.resume($lastKey)
+			.limit(10) // 10 by 10 items for this demo
+			.query(function( err, data ) {
+				if (err)
+					return console.log(err)
 
-	            if (this.LastEvaluatedKey === null) {
-	                // reached end, do a callback() maybe
-	                return;
-	            }
+				console.log("fetched cities in Canada: ", data.length )
 
-	            var $this = this;
-	            setTimeout(function() {
-	                recursive_call($this.LastEvaluatedKey);
-	            },1000);
+				if (this.LastEvaluatedKey === null) {
+					// reached end, do a callback() maybe
+					console.log('---- reached end of Canada :) ---')
+					return;
+				}
 
-	        })
+				var $this = this;
+				setTimeout(function() {
+					recursive_call($this.LastEvaluatedKey);
+				},100);
+
+			})
 	})(null);
 
 </div>
@@ -231,7 +243,7 @@
 <div class="split-result">
 	<div class="" style="position: absolute;top: 0px;left: 0px;right: 0px;height: 40px;background-color: #f0f0f0;padding: 0px 50px;">
 		<a class='btn btn-describe'> Describe </a>
-		<a class='btn disabled'> Execute </a>
+		<a class='btn btn-execute'> Execute </a>
 	</div>
 	<div class="" style="position: absolute;top: 40px;left: 0px;right: 0px;bottom: 0px;border-top: 1px solid #ccc;">
 		<div id="result-out" class="code wide textmate" style="position: absolute;top: 0px;left: 0px;right: 0px;bottom: 0px;"></div>

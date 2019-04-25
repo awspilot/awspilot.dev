@@ -20,11 +20,10 @@
 	// insert using VALUES does not currently support StringSet or NumberSet
 	DynamoDB.query(`
 
-		INSERT INTO tbl_name VALUES
-			({ email         : 'user1@test.com', active: false }),
-			({ email         : 'user2@test.com', active: false }),
-			({ email         : 'user2@test.com', active: true  })
-
+		INSERT INTO demo_table_hash_range VALUES
+			({ partitionKey: 'pk1', sortKey: 1, active: false }),
+			({ partitionKey: 'pk1', sortKey: 2, active: false }),
+			({ partitionKey: 'pk2', sortKey: 1, active: true  })
 		`,
 		function( err, data ) {
 			console.log( err, data )
@@ -37,7 +36,7 @@
 <div class="split-result">
 	<div class="" style="position: absolute;top: 0px;left: 0px;right: 0px;height: 40px;background-color: #f0f0f0;padding: 0px 50px;">
 		<a class='btn btn-describe'> Describe </a>
-		<a class='btn disabled'> Execute </a>
+		<a class='btn btn-execute'> Execute </a>
 	</div>
 	<div class="" style="position: absolute;top: 40px;left: 0px;right: 0px;bottom: 0px;border-top: 1px solid #ccc;">
 		<div id="result-out" class="code wide textmate" style="position: absolute;top: 0px;left: 0px;right: 0px;bottom: 0px;"></div>
