@@ -139,6 +139,9 @@ execute_code = function(code) {
 			var origainal_cl = console.log;
 			console.log = function() {
 				[].slice.apply(arguments).map(function(argument) {
+					if (typeof argument === "object")
+						return editor.setValue(editor.getValue() + JSON.stringify(argument,null,"\t") + ' ',-1)
+
 					editor.setValue(editor.getValue() + argument + ' ',-1)
 				})
 				editor.setValue(editor.getValue() + "\n" ,-1)
