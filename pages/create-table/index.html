@@ -38,7 +38,7 @@
 	// THROUGHPUT is optional, defaults to 1 1
 	// if PAY_PER_REQUEST is used, THROUGHPUT is ignored by AWS
 	DynamoDB.query(`
-		CREATE PROVISIONED TABLE tbl_name (
+		CREATE PROVISIONED TABLE demo_table_hash_range (
 			partitionKey STRING,
 			altKey STRING,
 			sortKey NUMBER,
