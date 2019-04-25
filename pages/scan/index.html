@@ -169,6 +169,11 @@
 			return;
 		describe_code(ace.edit($('.activeTab').attr('id')).getValue())
 	})
+	$('.btn-execute').on('click', function() {
+		if ($(this).hasClass('disabled'))
+			return;
+		execute_code(ace.edit($('.activeTab').attr('id')).getValue())
+	})
 });</script> <script>
 
 describe_code = function(code) {
@@ -239,6 +244,78 @@ describe_code = function(code) {
 	}, 500)
 
 }
+
+
+
+execute_code = function(code) {
+	var editor = ace.edit('result-out')
+	editor.setValue('')
+	setTimeout(function() {
+		;
+		// (function(code) {
+		// 
+		// 	var fakedynamo = {
+		// 		config: {dynamoDbCrc32: true,},
+		// 		describeTable: function( params ,callback) {
+		// 			editor.setValue( editor.getValue() + "\n\tdescribeTable\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
+		// 			callback(null, {
+		// 				Table: {
+		// 					KeySchema: [
+		// 						{AttributeName: 'partition_key', KeyType: 'HASH' },
+		// 						{AttributeName: 'sort_key', KeyType: 'RANGE' }
+		// 					]
+		// 				}
+		// 			})
+		// 		},
+		// 
+		// 		createTable: function( params ,callback) {
+		// 			editor.setValue(editor.getValue() + "\n\tcreateTable\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
+		// 		},
+		// 		updateTable: function( params ,callback) {
+		// 			editor.setValue(editor.getValue() + "\n\tupdateTable\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
+		// 		},
+		// 		putItem: function( params ,callback) {
+		// 			editor.setValue(editor.getValue() + "\n\tputItem\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
+		// 		},
+		// 		updateItem: function( params ,callback) {
+		// 			editor.setValue(editor.getValue() + "\n\tupdateItem\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
+		// 		},
+		// 		batchWriteItem: function( params ,callback) {
+		// 			editor.setValue(editor.getValue() + "\n\tbatchWriteItem\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
+		// 		},
+		// 		deleteItem: function( params ,callback) {
+		// 			editor.setValue(editor.getValue() + "\n\tdeleteItem\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
+		// 		},
+		// 		getItem: function( params ,callback) {
+		// 			editor.setValue(editor.getValue() + "\n\tgetItem\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
+		// 		},
+		// 		query: function( params ,callback) {
+		// 			editor.setValue(editor.getValue() + "\n\tquery\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
+		// 		},
+		// 		scan: function( params ,callback) {
+		// 			editor.setValue(editor.getValue() + "\n\tscan\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
+		// 		},
+		// 		deleteTable: function( params ,callback) {
+		// 			editor.setValue(editor.getValue() + "\n\tdeleteTable\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
+		// 		},
+		// 
+		// 	}
+		// 	DynamoDB = new window['@awspilot/dynamodb'](fakedynamo)
+		// 	var origainal_cl = console.log;
+		// 	console.log = function() {
+		// 		[].slice.apply(arguments).map(function(argument) {
+		// 			editor.setValue(editor.getValue() + argument + ' ',-1)
+		// 		})
+		// 		editor.setValue(editor.getValue() + "\n" ,-1)
+		// 	}
+		// 	eval(code)
+		// 
+		// })(code)
+
+	}, 500)
+
+}
+
 
 // describe_code(ace.edit($('.activeTab').attr('id')).getValue())</script> <script src="https://www.googletagmanager.com/gtag/js?id=UA-119179002-1" async></script> <script>  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
