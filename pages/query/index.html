@@ -102,13 +102,17 @@
 	// Query an Index
 	// return all attributes including non-projected ( LSI only )
 	DynamoDB
-		.table('messages')
-		.index('starredIndex')
+		.table('cities')
+		.index('country-index')
 		.select( DynamoDB.ALL )
-		.where('to').eq('user1@test.com')
-		.descending()
-		.query(function( err, data ) {
-
+		.where('country').eq('Canada')
+		//.descending()
+		.limit(10)
+		//.consistent_read()
+		.query(function( err, data, raw ) {
+			console.log( "LastEvaluatedKey = ",this.LastEvaluatedKey )
+			console.log( err, data )
+			console.log( "raw data ", raw )
 		});
 
 	// NOTE: specifying non-projected fields in select() will:
