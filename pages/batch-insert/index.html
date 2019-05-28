@@ -42,7 +42,16 @@
 
 	<div class="code rw wide textmate activeTab" id="tab1" style="position: absolute;top: 49px;left: 0px;right: 0px;bottom: 0px;z-index: 100;">
 
-
+		DynamoDB
+			.batch()
+			.table('demo_table_hash_range')
+			.put({ partitionKey: 'pk1', sortKey: 1, active: false })
+			.put({ partitionKey: 'pk1', sortKey: 2, active: false })
+			.put({ partitionKey: 'pk2', sortKey: 1, active: true  })
+			.del({ partitionKey: 'pk3', sortKey: 1 })
+			.write(function( err, data ) {
+				console.log( err, data )
+			});
 
 	</div>
 
