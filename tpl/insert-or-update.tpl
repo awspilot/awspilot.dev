@@ -26,8 +26,8 @@
 		.table('demo_table_hash_range')
 		.return(DynamoDB.UPDATED_OLD)
 		.insert_or_update({
-			partition_key: 'foo.bar',
-			sort_key: 1,
+			partitionKey: 'foo.bar',
+			sortKey: 1,
 
 			password: 'qwert',
 			firstname: 'Smith',
