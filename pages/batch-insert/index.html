@@ -66,7 +66,20 @@
 
 	<div class="code rw wide textmate" id="tab2" style="position: absolute;top: 49px;left: 0px;right: 0px;bottom: 0px;z-index: 1;">
 
+		var list = [
+			{ partitionKey: 'pk1', sortKey: 1, active: false },
+			{ partitionKey: 'pk1', sortKey: 2, active: false },
+			{ partitionKey: 'pk2', sortKey: 1, active: true  }
+		]
+		var ddb = DynamoDB.batch().table('demo_table_hash_range')
 
+		list.forEach(function( item ) {
+			ddb.put( item )
+		})
+
+		ddb.write(function( err, data ) {
+			console.log( err, data )
+		});
 
 	</div>
 
