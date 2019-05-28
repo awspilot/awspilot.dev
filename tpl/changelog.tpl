@@ -1,5 +1,9 @@
 <div class="content">
 
+<h1>@1.4.0</h1>
+.batch().table().put().put().del().write() - wrap around batchWriteItem<br>
+updated dev dependencies for security reasons<br>
+
 <h1>@1.3.0</h1>
 1.3.0+ will follow SemVer (major.minor.patch) and increment "minor" for new features <br>
 JSON keys in SQL can now be keywords without the need of wrapping: eg. { "keyword": 1 } can now be just { keyword: 1 }<br>
