@@ -23,11 +23,11 @@
 	// Insert on Duplicate Item Update
 	// WARN: use schema() to prevent describeTable call
 	DynamoDB
-		.table('tbl_name')
+		.table('demo_table_hash_range')
 		.return(DynamoDB.UPDATED_OLD)
 		.insert_or_update({
-			partition_key: 'test.com',
-			sort_key: 'test@test.com',
+			partition_key: 'foo.bar',
+			sort_key: 1,
 
 			password: 'qwert',
 			firstname: 'Smith',
@@ -56,7 +56,7 @@
 			// remove elements from numberSet
 			unneeded_ns_items: DynamoDB.del(DynamoDB.NS([111,444])),
 		}, function( err, data ) {
-
+			console.log( err, data )
 		});
 
 </div>
