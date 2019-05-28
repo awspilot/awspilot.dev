@@ -54,6 +54,8 @@
 
 
 	// Insert Item ( no update )
+	// will fail if item exists
+	// checks the table schema to add a conditional requests and make sure item does not exist
 	// WARN: use schema() to prevent describeTable call
 	DynamoDB
 		.table('demo_table_hash_range')
@@ -123,12 +125,12 @@
 <div class="code rw wide textmate" id="tab2" style="position: absolute;top: 49px;left: 0px;right: 0px;bottom: 0px;z-index: 1;">
 
 
-	// SQL keywords must be enclosed in "`", 
+	// SQL keywords must be enclosed in "`",
 	// if no callback is supplied, promise is returned
 	// new Date() is evaluated to String or Number when parsed
-	// 
+	//
 	// WARNING:
-	//    INSERT statement does not replace or update if an item with the same key exists 
+	//    INSERT statement does not replace or update if an item with the same key exists
 	//    to prevent replacing or updating, awspilot needs to know the key schema
 	//    and will make an extra call to describeTable
 	//    use schema() to prevent the extra describeTable call
@@ -148,24 +150,24 @@
 			binary        = Buffer.from('4oya', 'base64'),
 
 
-			array = [ 
-				'hello' + " " + "world", 
-				1+2.14, 
-				null, 
+			array = [
+				'hello' + " " + "world",
+				1+2.14,
+				null,
 				true,
 				Buffer.from('aXRlbTE=', 'base64'),
 				{ nested_object: true },
 				['nested_array'],
 				new StringSet( [ 'sss','bbb','ccc' ] ),
 				new NumberSet( [  111 , 222 , 333  ] ),
-				new BinarySet( [ Buffer.from('aXRlbTE=','base64') ]), 
+				new BinarySet( [ Buffer.from('aXRlbTE=','base64') ]),
 			],
-			object = { 
-				string: 's', 
+			object = {
+				string: 's',
 				number: 1,
 				null: null,
 				boolean: true,
-				"me-too": "JSON key names can be enclosed in quotes", 
+				"me-too": "JSON key names can be enclosed in quotes",
 				binary: Buffer.from('aXRlbTE=', 'base64'),
 				ss : new StringSet( [ 'sss','bbb','ccc' ] ),
 				ns : new NumberSet( [  111 , 222 , 333  ] ),
@@ -211,24 +213,24 @@
 				updated_at    : null,
 				bin           : Buffer.from('4oya', 'base64'),
 
-				array : [ 
-					'text', 
-					1, 
-					null, 
+				array : [
+					'text',
+					1,
+					null,
 					true,
 					Buffer.from('aXRlbTE=', 'base64'),
 					{ nested_object: true },
 					['nested_array'],
 					new StringSet( [ 'sss','bbb','ccc' ] ),
 					new NumberSet( [  111 , 222 , 333  ] ),
-					new BinarySet( [ Buffer.from('aXRlbTE=','base64') ]), 
+					new BinarySet( [ Buffer.from('aXRlbTE=','base64') ]),
 				],
-				object : { 
-					string: 's', 
+				object : {
+					string: 's',
 					number: 1,
 					null: null,
 					boolean: true,
-					"me-too": "JSON key names can be enclosed in quotes", 
+					"me-too": "JSON key names can be enclosed in quotes",
 					binary: Buffer.from('aXRlbTE=', 'base64'),
 					ss : new StringSet( [ 'sss','bbb','ccc' ] ),
 					ns : new NumberSet( [  111 , 222 , 333  ] ),
