@@ -46,7 +46,7 @@
 
 	</div>
 
-	<div class="code rw wide textmate" id="tab2" style="position: absolute;top: 49px;left: 0px;right: 0px;bottom: 0px;z-index: 101;">
+	<div class="code rw wide textmate" id="tab2" style="position: absolute;top: 49px;left: 0px;right: 0px;bottom: 0px;z-index: 1;">
 
 		// if there are multiple items in VALUES then batchWriteItem is performed
 		// insert using VALUES does not currently support StringSet or NumberSet
