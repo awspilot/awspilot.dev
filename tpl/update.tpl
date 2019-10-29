@@ -95,7 +95,7 @@
 			unneeded_attribute: DynamoDB.del(),
 
 		}, function( err, data ) {
-
+			console.log( err, data )
 		});
 
 </div>
@@ -126,23 +126,23 @@
 			days_left      += -1,
 
 			array = [
-				'hello' + " " + "world", 
-				1+2.14, 
-				null, 
+				'hello' + " " + "world",
+				1+2.14,
+				null,
 				true,
 				Buffer.from('aXRlbTE=', 'base64'),
 				{ nested_object: true },
 				['nested_array'],
 				new StringSet( [ 'sss','bbb','ccc' ] ),
 				new NumberSet( [  111 , 222 , 333  ] ),
-				new BinarySet( [ Buffer.from('aXRlbTE=','base64') ]), 
+				new BinarySet( [ Buffer.from('aXRlbTE=','base64') ]),
 			],
 			object = {
-				string: 's', 
+				string: 's',
 				number: 1,
 				null: null,
 				boolean: true,
-				"me-too": "JSON key names can be enclosed in quotes", 
+				"me-too": "JSON key names can be enclosed in quotes",
 				binary: Buffer.from('aXRlbTE=', 'base64'),
 				ss : new StringSet( [ 'sss','bbb','ccc' ] ),
 				ns : new NumberSet( [  111 , 222 , 333  ] ),
@@ -173,7 +173,7 @@
 <div class="split-result">
 	<div class="" style="position: absolute;top: 0px;left: 0px;right: 0px;height: 40px;background-color: #f0f0f0;padding: 0px 50px;">
 		<a class='btn btn-describe'> Describe </a>
-		<a class='btn disabled'> Execute </a>
+		<a class='btn btn-execute'> Execute </a>
 	</div>
 	<div class="" style="position: absolute;top: 40px;left: 0px;right: 0px;bottom: 0px;border-top: 1px solid #ccc;">
 		<div id="result-out" class="code wide textmate" style="position: absolute;top: 0px;left: 0px;right: 0px;bottom: 0px;"></div>
