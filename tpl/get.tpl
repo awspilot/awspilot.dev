@@ -47,13 +47,13 @@
 
 	// getting an item from a HASH-RANGE table, with consistent read
 	DynamoDB
-	    .table('messages')
-	    .where('to').eq('user1@test.com')
-	    .where('date').eq( 1375538399 )
-	    .consistent_read()
-	    .get(function( err, data ) {
-
-	    });
+		.table('messages')
+		.where('to').eq('user1@test.com')
+		.where('date').eq( 1375538399 )
+		.consistent_read()
+		.get(function( err, data ) {
+			console.log( err, data )
+		});
 
 </div>
 
@@ -61,12 +61,12 @@
 
 	// specifying what attributes to return
 	DynamoDB
-	    .table('users')
-	    .select('email','registered_at','object.attribute','string_set[0]','array[1]')
-	    .where('email').eq( 'test@test.com' )
-	    .get(function( err, data ) {
-
-	    });
+		.table('users')
+		.select('email','registered_at','object.attribute','string_set[0]','array[1]')
+		.where('email').eq( 'test@test.com' )
+		.get(function( err, data ) {
+			console.log( err, data )
+		});
 
 </div>
 </div>
@@ -75,7 +75,7 @@
 <div class="split-result">
 	<div class="" style="position: absolute;top: 0px;left: 0px;right: 0px;height: 40px;background-color: #f0f0f0;padding: 0px 50px;">
 		<a class='btn btn-describe'> Describe </a>
-		<a class='btn disabled'> Execute </a>
+		<a class='btn btn-execute'> Execute </a>
 	</div>
 	<div class="" style="position: absolute;top: 40px;left: 0px;right: 0px;bottom: 0px;border-top: 1px solid #ccc;">
 		<div id="result-out" class="code wide textmate" style="position: absolute;top: 0px;left: 0px;right: 0px;bottom: 0px;"></div>
