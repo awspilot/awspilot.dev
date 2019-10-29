@@ -63,6 +63,7 @@
 	DynamoDB
 		.table('users')
 		.select('email','registered_at','object.attribute','string_set[0]','array[1]')
+		// you can also pass an Array as .select(['attr1','attr2'])
 		.where('email').eq( 'test@test.com' )
 		.get(function( err, data ) {
 			console.log( err, data )
