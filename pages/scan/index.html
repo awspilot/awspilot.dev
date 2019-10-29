@@ -76,6 +76,7 @@
 		DynamoDB
 			.table('cities')
 			.resume($lastKey)
+			.limit(1000)
 			.scan(function( err, data ) {
 				// handle error, process data ...
 				if (err)
