@@ -57,7 +57,7 @@
 			password: 'qwert',
 			firstname: 'Smith'
 		}, function( err, data ) {
-
+			console.log( err, data )
 		})
 
 </div>
