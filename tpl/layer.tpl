@@ -43,13 +43,41 @@
 
 			<tr>
 				<td></td>
+				<td>Asia Pacific (Hong Kong)</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Asia Pacific (Mumbai)</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Asia Pacific (Seoul)</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Asia Pacific (Singapore)</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Asia Pacific (Sydney)</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Asia Pacific (Tokyo)</td>
+			</tr>
+
+
+
+
+
+
+			<tr>
+				<td></td>
 				<td>Canada (Central)</td>
 			</tr>
 
 
-			<tr>
-				<td colspan="2">EU</td>
-			</tr>
+
 			<tr>
 				<td>arn:aws:lambda:eu-central-1:452980636694:layer:awspilot-dynamodb-1_5_0:1</td>
 				<td>Europe (Frankfurt)</td>
@@ -70,6 +98,20 @@
 				<td></td>
 				<td>Europe (Stockholm)</td>
 			</tr>
+
+
+
+
+			<tr>
+				<td></td>
+				<td>Middle East (Bahrain)</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>South America (São Paulo)</td>
+			</tr>
+
+
 		</tbody>
 	</table>
 
