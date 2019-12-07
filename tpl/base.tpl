@@ -103,6 +103,7 @@
 					<li><span class="tree_label"><a href="/"> <img src="/images/text.png"/> README.md</a></span>
 					<li><span class="tree_label"><a href="/pages/apidef/"> <img src="/images/text.png"/> API_REF.md</a></span>
 					<li><span class="tree_label"><a href="/pages/sql/"> <img src="/images/text.png"/> SQL.md </a>
+					<li><span class="tree_label"><a href="/pages/layer/"> <img src="/images/text.png"/> Layers.md</a>
 					<li><span class="tree_label"><a href="/pages/changelog/"> <img src="/images/text.png"/> ChangeLog.md</a>
 
 

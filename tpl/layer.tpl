@@ -4,8 +4,7 @@
 
 	<h3>Lambda Layers</h3>
 
-	<p>
-	</p>
+	<p></p>
 
 	<style>
 	.layertable {border-collapse: collapse}
