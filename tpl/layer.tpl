@@ -14,9 +14,15 @@
 
 	</style>
 	<table class="layertable">
+		<thead>
+			<tr>
+				<th>Layer</th>
+				<th>Region</th>
+			</tr>
+		</thead>
 		<tbody>
 			<tr>
-				<td coldpan="2">US</td>
+				<td colspan="2">US</td>
 			</tr>
 			<tr>
 				<td>arn:aws:lambda:us-east-1:452980636694:layer:awspilot-dynamodb-1_5_0:1</td>
@@ -29,7 +35,7 @@
 			</tr>
 
 			<tr>
-				<td coldpan="2">EU</td>
+				<td colspan="2">EU</td>
 			</tr>
 			<tr>
 				<td>arn:aws:lambda:eu-central-1:452980636694:layer:awspilot-dynamodb-1_5_0:1</td>
