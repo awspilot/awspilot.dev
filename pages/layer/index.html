@@ -28,10 +28,17 @@
 				<td>arn:aws:lambda:us-east-1:452980636694:layer:awspilot-dynamodb-1_5_0:1</td>
 				<td>Us East (N. Virginia)</td>
 			</tr>
-
 			<tr>
 				<td>arn:aws:lambda:us-east-2:452980636694:layer:awspilot-dynamodb-1_5_0:1</td>
 				<td>Us East (Ohio)</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Us West (N.California)</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Us West (N.Oregon)</td>
 			</tr>
 
 			<tr>
@@ -40,6 +47,18 @@
 			<tr>
 				<td>arn:aws:lambda:eu-central-1:452980636694:layer:awspilot-dynamodb-1_5_0:1</td>
 				<td>Europe (Frankfurt)</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Europe (Ireland)</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Europe (London)</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Europe (Stockholm)</td>
 			</tr>
 		</tbody>
 	</table>
