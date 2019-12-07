@@ -21,9 +21,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td colspan="2">US</td>
-			</tr>
+
 			<tr>
 				<td>arn:aws:lambda:us-east-1:452980636694:layer:awspilot-dynamodb-1_5_0:1</td>
 				<td>Us East (N. Virginia)</td>
@@ -41,6 +39,14 @@
 				<td>Us West (N.Oregon)</td>
 			</tr>
 
+
+
+			<tr>
+				<td></td>
+				<td>Canada (Central)</td>
+			</tr>
+
+
 			<tr>
 				<td colspan="2">EU</td>
 			</tr>
@@ -55,6 +61,10 @@
 			<tr>
 				<td></td>
 				<td>Europe (London)</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Europe (Paris)</td>
 			</tr>
 			<tr>
 				<td></td>
