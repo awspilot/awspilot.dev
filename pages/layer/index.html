@@ -28,7 +28,9 @@
 				<td>Us East (Ohio)</td>
 			</tr>
 
-
+			<tr>
+				<td coldpan="2">EU</td>
+			</tr>
 			<tr>
 				<td>arn:aws:lambda:eu-central-1:452980636694:layer:awspilot-dynamodb-1_5_0:1</td>
 				<td>Europe (Frankfurt)</td>
