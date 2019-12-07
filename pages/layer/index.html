@@ -17,8 +17,15 @@
 		<tbody>
 			<tr>
 				<td>arn:aws:lambda:us-east-1:452980636694:layer:awspilot-dynamodb-1_5_0:1</td>
-				<td>N. Virginia</td>
+				<td>Us East (N. Virginia)</td>
 			</tr>
+
+			<tr>
+				<td>arn:aws:lambda:us-east-2:452980636694:layer:awspilot-dynamodb-1_5_0:1</td>
+				<td>Us East (Ohio)</td>
+			</tr>
+
+
 			<tr>
 				<td>arn:aws:lambda:eu-central-1:452980636694:layer:awspilot-dynamodb-1_5_0:1</td>
 				<td>Frankfurt</td>
