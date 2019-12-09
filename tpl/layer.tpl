@@ -17,25 +17,31 @@
 			<tr>
 				<th>Layer</th>
 				<th>Region</th>
+				<th>Size</th>
 			</tr>
 		</thead>
 		<tbody>
 
 			<tr>
-				<td>arn:aws:lambda:us-east-1:452980636694:layer:awspilot-dynamodb-1_5_0:1</td>
+				<td>arn:aws:lambda:us-east-1:452980636694:layer:awspilot-dynamodb-1_5_1:1</td>
 				<td>Us East (N. Virginia)</td>
+				<td>5.8M</td>
 			</tr>
 			<tr>
-				<td>arn:aws:lambda:us-east-2:452980636694:layer:awspilot-dynamodb-1_5_0:1</td>
+				<td>arn:aws:lambda:us-east-2:452980636694:layer:awspilot-dynamodb-1_5_1:3</td>
 				<td>Us East (Ohio)</td>
+				<td>5.8M</td>
 			</tr>
 			<tr>
-				<td></td>
+				<td>arn:aws:lambda:us-west-1:452980636694:layer:awspilot-dynamodb-1_5_1:1</td>
 				<td>Us West (N.California)</td>
+				<td>5.8M</td>
+
 			</tr>
 			<tr>
-				<td></td>
+				<td>arn:aws:lambda:us-west-2:452980636694:layer:awspilot-dynamodb-1_5_1:1</td>
 				<td>Us West (N.Oregon)</td>
+				<td>5.8M</td>
 			</tr>
 
 
@@ -43,26 +49,32 @@
 			<tr>
 				<td></td>
 				<td>Asia Pacific (Hong Kong)</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td></td>
 				<td>Asia Pacific (Mumbai)</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td></td>
 				<td>Asia Pacific (Seoul)</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td></td>
 				<td>Asia Pacific (Singapore)</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td></td>
 				<td>Asia Pacific (Sydney)</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td></td>
 				<td>Asia Pacific (Tokyo)</td>
+				<td></td>
 			</tr>
 
 
@@ -73,41 +85,47 @@
 			<tr>
 				<td></td>
 				<td>Canada (Central)</td>
+				<td></td>
 			</tr>
 
 
 
+
 			<tr>
-				<td>arn:aws:lambda:eu-central-1:452980636694:layer:awspilot-dynamodb-1_5_0:1</td>
+				<td>arn:aws:lambda:eu-central-1:452980636694:layer:awspilot-dynamodb-1_5_1:1</td>
 				<td>Europe (Frankfurt)</td>
+				<td>5.8M</td>
 			</tr>
 			<tr>
 				<td></td>
 				<td>Europe (Ireland)</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td></td>
 				<td>Europe (London)</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td></td>
 				<td>Europe (Paris)</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td></td>
 				<td>Europe (Stockholm)</td>
+				<td></td>
 			</tr>
-
-
-
 
 			<tr>
 				<td></td>
 				<td>Middle East (Bahrain)</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td></td>
 				<td>South America (São Paulo)</td>
+				<td></td>
 			</tr>
 
 
