@@ -1,5 +1,12 @@
 <div class="content">
 
+<h1>1.5.1</h1>
+import only dynamodb from aws-sdk<br>
+
+<h1>1.5.0</h1>
+wrap around batchGetItem - .batch().table().get().get().read()<br>
+wrap around batchWriteItem - .batch().table().put().del().write()<br>
+
 <h1>@1.4.0</h1>
 .batch().table().put().put().del().write() - wrap around batchWriteItem<br>
 updated dev dependencies for security reasons<br>
