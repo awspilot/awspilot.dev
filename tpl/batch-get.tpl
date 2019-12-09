@@ -36,11 +36,9 @@
 
 		DynamoDB
 			.batch()
-			.table('demo_table_hash_range')
-			.get({ user_id: t.user_id, photo_id: t.photo_id })
-			.get({ partitionKey: 'pk1', sortKey: 2 })
-			.get({ partitionKey: 'pk2', sortKey: 1  })
-			.get({ partitionKey: 'pk3', sortKey: 1 })
+			.table('countries')
+			.get({ country_code: 'US' })
+			.get({ country_code: 'CA' })
 			.read(function( err, data ) {
 				console.log( err, data )
 			});
