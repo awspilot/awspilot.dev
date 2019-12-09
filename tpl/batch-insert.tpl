@@ -104,7 +104,7 @@
 
 <div class="split-result">
 	<div class="" style="position: absolute;top: 0px;left: 0px;right: 0px;height: 40px;background-color: #f0f0f0;padding: 0px 50px;">
-		<a class='btn btn-describe disabled'> Describe </a>
+		<a class='btn btn-describe'> Describe </a>
 		<a class='btn btn-execute disabled'> Execute </a>
 	</div>
 	<div class="" style="position: absolute;top: 40px;left: 0px;right: 0px;bottom: 0px;border-top: 1px solid #ccc;">
