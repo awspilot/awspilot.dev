@@ -116,6 +116,7 @@
 					<li><span class="tree_label"><a href="/pages/replace/"> <img src="/images/code.png"/> replace.js</a>
 					<li><span class="tree_label"><a href="/pages/delete/"> <img src="/images/code.png"/> delete.js</a>
 					<li><span class="tree_label"><a href="/pages/get/"> <img src="/images/code.png"/> get.js</a>
+					<li><span class="tree_label"><a href="/pages/batch-get/"> <img src="/images/code.png"/> batch_get.js</a>
 					<li><span class="tree_label"><a href="/pages/query/"> <img src="/images/code.png"/> query.js </a>
 					<li><span class="tree_label"><a href="/pages/scan/"> <img src="/images/code.png"/> scan.js </a>
 					<li><span class="tree_label"><a href="/pages/drop-index/"> <img src="/images/code.png"/> drop_index.js </a>
