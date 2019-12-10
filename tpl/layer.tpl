@@ -94,10 +94,10 @@
 
 
 			<tr>
-				<td></td>
-				<td></td>
+				<td>ca-central-1</td>
+				<td>arn:aws:lambda:ca-central-1:452980636694:layer:awspilot-dynamodb-1_5_1:1</td>
 				<td>Canada (Central)</td>
-				<td></td>
+				<td>5.8M</td>
 			</tr>
 
 
