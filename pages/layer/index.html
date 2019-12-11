@@ -110,8 +110,8 @@
 				<td>5.8M</td>
 			</tr>
 			<tr>
-				<td></td>
-				<td></td>
+				<td>eu-west-1</td>
+				<td>arn:aws:lambda:eu-west-1:452980636694:layer:awspilot-dynamodb-1_5_1:1</td>
 				<td>Europe (Ireland)</td>
 				<td></td>
 			</tr>
