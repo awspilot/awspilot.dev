@@ -128,10 +128,10 @@
 				<td>5.8M</td>
 			</tr>
 			<tr>
-				<td></td>
-				<td></td>
+				<td>eu-north-1</td>
+				<td>arn:aws:lambda:eu-north-1:452980636694:layer:awspilot-dynamodb-1_5_1:1</td>
 				<td>Europe (Stockholm)</td>
-				<td></td>
+				<td>5.8M</td>
 			</tr>
 
 			<tr>
