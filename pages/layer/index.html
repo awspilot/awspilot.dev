@@ -141,10 +141,10 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td></td>
-				<td></td>
+				<td>sa-east-1</td>
+				<td>arn:aws:lambda:sa-east-1:452980636694:layer:awspilot-dynamodb-1_5_1:1</td>
 				<td>South America (São Paulo)</td>
-				<td></td>
+				<td>5.8M</td>
 			</tr>
 
 
