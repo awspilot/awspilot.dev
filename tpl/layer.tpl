@@ -82,10 +82,10 @@
 				<td>5.8M</td>
 			</tr>
 			<tr>
-				<td></td>
-				<td></td>
+				<td>ap-northeast-1</td>
+				<td>arn:aws:lambda:ap-northeast-1:452980636694:layer:awspilot-dynamodb-1_5_1:1</td>
 				<td>Asia Pacific (Tokyo)</td>
-				<td></td>
+				<td>5.8M</td>
 			</tr>
 
 
