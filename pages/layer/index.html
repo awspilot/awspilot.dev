@@ -25,9 +25,9 @@
 
 			<tr>
 				<td>us-east-1</td>
-				<td>arn:aws:lambda:us-east-1:452980636694:layer:awspilot-dynamodb-1_5_1:1</td>
+				<td>arn:aws:lambda:us-east-1:452980636694:layer:awspilot-dynamodb-2_0_0-beta:1</td>
 				<td>Us East (N. Virginia)</td>
-				<td>5.8M</td>
+				<td>128KB</td>
 			</tr>
 			<tr>
 				<td>us-east-2</td>
