@@ -64,10 +64,10 @@
 				<td>128KB</td>
 			</tr>
 			<tr>
-				<td></td>
-				<td></td>
+				<td>ap-northeast-2</td>
+				<td>arn:aws:lambda:ap-northeast-2:452980636694:layer:awspilot-dynamodb-2_0_0-beta:1</td>
 				<td>Asia Pacific (Seoul)</td>
-				<td></td>
+				<td>128KB</td>
 			</tr>
 			<tr>
 				<td>ap-southeast-1</td>
