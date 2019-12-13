@@ -58,10 +58,10 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td></td>
-				<td></td>
+				<td>ap-south-1</td>
+				<td>arn:aws:lambda:ap-south-1:452980636694:layer:awspilot-dynamodb-2_0_0-beta:1</td>
 				<td>Asia Pacific (Mumbai)</td>
-				<td></td>
+				<td>128KB</td>
 			</tr>
 			<tr>
 				<td></td>
