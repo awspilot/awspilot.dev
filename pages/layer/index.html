@@ -44,9 +44,9 @@
 			</tr>
 			<tr>
 				<td>us-west-2</td>
-				<td>arn:aws:lambda:us-west-2:452980636694:layer:awspilot-dynamodb-1_5_1:1</td>
+				<td>arn:aws:lambda:us-west-2:452980636694:layer:awspilot-dynamodb-2_0_0-beta:1</td>
 				<td>Us West (N.Oregon)</td>
-				<td>5.8M</td>
+				<td>128KB</td>
 			</tr>
 
 
