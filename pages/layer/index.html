@@ -52,10 +52,10 @@
 
 
 			<tr>
-				<td></td>
-				<td></td>
+				<td>ap-east-1</td>
+				<td>arn:aws:lambda:ap-east-1:452980636694:layer:awspilot-dynamodb-2_0_0-beta:1</td>
 				<td>Asia Pacific (Hong Kong)</td>
-				<td></td>
+				<td>128KB</td>
 			</tr>
 			<tr>
 				<td>ap-south-1</td>
