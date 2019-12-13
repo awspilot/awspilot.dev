@@ -71,9 +71,9 @@
 			</tr>
 			<tr>
 				<td>ap-southeast-1</td>
-				<td>arn:aws:lambda:ap-southeast-1:452980636694:layer:awspilot-dynamodb-1_5_1:1</td>
+				<td>arn:aws:lambda:ap-southeast-1:452980636694:layer:awspilot-dynamodb-2_0_0-beta:1</td>
 				<td>Asia Pacific (Singapore)</td>
-				<td>5.8M</td>
+				<td>128KB</td>
 			</tr>
 			<tr>
 				<td>ap-southeast-2</td>
