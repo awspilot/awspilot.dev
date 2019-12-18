@@ -46,7 +46,10 @@
 					.insert_or_update( { partitionKey: 'demo_insert_or_update', sortKey: new Date().getTime(), boolean: true })
 
 				.table('demo_table_hash_range')
-					.if('number').eq(8)
+					.if('number').eq(8) // lt, le, gt, ge, ne
+					.if('number').between(7,9)
+					.if('number').not().between(91,95)
+					.if('number').not().in([1,3,5,7,9])
 					.insert_or_replace({
 						partitionKey: 'insert_or_replace',
 						sortKey: 1,
