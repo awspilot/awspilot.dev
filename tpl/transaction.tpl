@@ -37,7 +37,14 @@
 		DynamoDB
 			.transact()
 				.table('demo_table_hash_range')
+					// .insert() does not support .if(), it expects that item does not exist
+					.insert( { partitionKey: 'insert', sortKey: new Date().getTime(), } )
+
+				.table('demo_table_hash_range')
+
 					.insert_or_update( { partitionKey: 'demo_insert_or_update', sortKey: 1, })
+
+				.table('demo_table_hash_range')
 					.insert_or_replace({ partitionKey: 'insert_or_replace'    , sortKey: 1, })
 			.write(function( err, data ) {
 				console.log( err, data )
