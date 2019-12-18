@@ -52,14 +52,19 @@
 					.if('price').not().in([1,3,5,7,9])
 					.if('description').begins_with("hello")
 					.if('description').not().contains('discount')
+					.if('me-no-exist').not().exists()
+					.if('logs[1].date').between('2019-11-01', '2020-01-01')
 					.insert_or_replace({
 						partitionKey: 'insert_or_replace',
 						sortKey: 1,
 
-
 						active: true,
 						price: 7.99,
 						description: "hello item",
+						logs: [
+							{ date: '2019-12-02', },
+							{ date: '2019-12-01', },
+						],
 						random: Math.random()
 					})
 
