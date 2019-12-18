@@ -34,6 +34,8 @@
 
 	<div class="code rw wide textmate activeTab" id="tab1" style="position: absolute;top: 49px;left: 0px;right: 0px;bottom: 0px;z-index: 100;">
 
+		DynamoDB.schema({ TableName: 'demo_table_hash_range', KeySchema: [ {AttributeName: 'partitionKey' }, {AttributeName: 'sortKey' } ] })
+
 		DynamoDB
 			.transact()
 				.table('demo_table_hash_range')
