@@ -164,7 +164,7 @@ describe_code = function(code) {
 				deleteTable: function( params ,callback) {
 					editor.setValue(editor.getValue() + "\n\tdeleteTable\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
 				},
-				transactWrite: function( params ,callback) {
+				transactWriteItems: function( params ,callback) {
 					editor.setValue(editor.getValue() + "\n\ttransactWrite\n" + JSON.stringify(params, null, "\t" ).split("\n").map(function(l) { return "\t"+l}).join("\n"),-1)
 				},
 
