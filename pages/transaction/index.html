@@ -43,9 +43,6 @@
 					.insert( { partitionKey: 'insert', sortKey: new Date().getTime(), } )
 
 				.table('demo_table_hash_range')
-					.insert_or_update( { partitionKey: 'demo_insert_or_update', sortKey: new Date().getTime(), boolean: true })
-
-				.table('demo_table_hash_range')
 					.if('active').eq(true) // eq, lt, le, gt, ge, ne
 					.if('price').between(7,9)
 					.if('price').not().between(91,95)
@@ -70,6 +67,21 @@
 
 				.table('demo_table_hash_range')
 					.replace( { partitionKey: 'replace', sortKey: 1, } )
+
+				.table('demo_table_hash_range')
+					.insert_or_update( { partitionKey: 'demo_insert_or_update', sortKey: new Date().getTime(), boolean: true })
+
+				.table('demo_table_hash_range')
+					.where('partitionKey').eq('update')
+					.where('sortKey').eq(1)
+					//.if('someobject.someattribute').not().exists()
+					.update( { mynumber: Math.random()  } )
+
+				.table('demo_table_hash_range')
+					.where('partitionKey').eq('replace')
+					.where('sortKey').eq(1)
+					// .if('pending_delete').eq(true)
+					.delete()
 
 			.write(function( err, data ) {
 				console.log( err, data )
