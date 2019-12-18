@@ -1,5 +1,10 @@
 <div class="content">
 
+<h1>2.0.0</h1>
+removed npm-shrinkwrap, was causing npm install to also install dev dependencies ( npm bug ?)<br>
+aws-sdk as peer dependency ( shrinks deply size for environments with embedded aws-sdk eg. Lambda )<br>
+experimental transactWrite support<br>
+
 <h1>1.5.1</h1>
 import only dynamodb from aws-sdk<br>
 
