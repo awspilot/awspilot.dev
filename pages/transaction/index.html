@@ -68,6 +68,9 @@
 						random: Math.random()
 					})
 
+				.table('demo_table_hash_range')
+					.replace( { partitionKey: 'replace', sortKey: 1, } )
+
 			.write(function( err, data ) {
 				console.log( err, data )
 			});
