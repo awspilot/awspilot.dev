@@ -119,7 +119,7 @@
 					<li><span class="tree_label"><a href="/pages/batch-get/"> <img src="/images/code.png"/> batch_get.js</a>
 					<li><span class="tree_label"><a href="/pages/query/"> <img src="/images/code.png"/> query.js </a>
 					<li><span class="tree_label"><a href="/pages/scan/"> <img src="/images/code.png"/> scan.js </a>
-					<li><span class="tree_label"><a href="/pages/transactions/"> <img src="/images/code.png"/> transactions.js </a>
+					<li><span class="tree_label"><a href="/pages/transaction/"> <img src="/images/code.png"/> transactions.js </a>
 					<li><span class="tree_label"><a href="/pages/drop-index/"> <img src="/images/code.png"/> drop_index.js </a>
 					<li><span class="tree_label"><a href="/pages/drop-table/"> <img src="/images/code.png"/> drop_table.js </a>
 
