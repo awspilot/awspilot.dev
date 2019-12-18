@@ -78,7 +78,7 @@
 					.update( { mynumber: Math.random()  } )
 
 				.table('demo_table_hash_range')
-					.where('partitionKey').eq('replace')
+					.where('partitionKey').eq('delete')
 					.where('sortKey').eq(1)
 					// .if('pending_delete').eq(true)
 					.delete()
