@@ -46,15 +46,20 @@
 					.insert_or_update( { partitionKey: 'demo_insert_or_update', sortKey: new Date().getTime(), boolean: true })
 
 				.table('demo_table_hash_range')
-					.if('number').eq(8) // lt, le, gt, ge, ne
-					.if('number').between(7,9)
-					.if('number').not().between(91,95)
-					.if('number').not().in([1,3,5,7,9])
+					.if('active').eq(true) // eq, lt, le, gt, ge, ne
+					.if('price').between(7,9)
+					.if('price').not().between(91,95)
+					.if('price').not().in([1,3,5,7,9])
+					.if('description').begins_with("hello")
+					.if('description').not().contains('discount')
 					.insert_or_replace({
 						partitionKey: 'insert_or_replace',
 						sortKey: 1,
 
-						number: 8,
+
+						active: true,
+						price: 7.99,
+						description: "hello item",
 						random: Math.random()
 					})
 
