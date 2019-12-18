@@ -43,11 +43,18 @@
 					.insert( { partitionKey: 'insert', sortKey: new Date().getTime(), } )
 
 				.table('demo_table_hash_range')
-
-					.insert_or_update( { partitionKey: 'demo_insert_or_update', sortKey: 1, })
+					.insert_or_update( { partitionKey: 'demo_insert_or_update', sortKey: new Date().getTime(), boolean: true })
 
 				.table('demo_table_hash_range')
-					.insert_or_replace({ partitionKey: 'insert_or_replace'    , sortKey: 1, })
+					.if('number').eq(8)
+					.insert_or_replace({
+						partitionKey: 'insert_or_replace',
+						sortKey: 1,
+
+						number: 8,
+						random: Math.random()
+					})
+
 			.write(function( err, data ) {
 				console.log( err, data )
 			});
