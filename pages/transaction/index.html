@@ -36,6 +36,7 @@
 
 		DynamoDB.schema({ TableName: 'demo_table_hash_range', KeySchema: [ {AttributeName: 'partitionKey' }, {AttributeName: 'sortKey' } ] })
 
+		// experimental support for transactions available from version 2.x
 		DynamoDB
 			.transact()
 				.table('demo_table_hash_range')
