@@ -20,14 +20,14 @@
 	</p>
 
 	<div class="code console iplastic">
-	docker run -p 8000:8000 -p 8080:80 -d  awspilotcom/dynamodb-ui
+	docker run -p 8000:8000 -p 8080:80 -d  awspilotdev/dynamodb-ui
 	</div>
 	<br>
 	Dynamodb server will then be available on port 8000 and web ui on http://localhost:8080/<br>
 	<br>
 	For persistent storage use:<br>
 	<div class="code console iplastic">
-	docker run -p 8000:8000 -p 80:80 -v storage-volume:/storage -d  awspilotcom/dynamodb-ui
+	docker run -p 8000:8000 -p 80:80 -v storage-volume:/storage -d  awspilotdev/dynamodb-ui
 	</div>
 
 
