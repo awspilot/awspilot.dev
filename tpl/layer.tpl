@@ -83,7 +83,7 @@
 			</tr>
 			<tr>
 				<td>ap-northeast-1</td>
-				<td>arn:aws:lambda:ap-northeast-1:452980636694:layer:awspilot-dynamodb-2_0_0-beta:1</td>
+				<td>arn:aws:lambda:ap-northeast-1:452980636694:layer:awspilot-dynamodb-2_0_0:1</td>
 				<td>Asia Pacific (Tokyo)</td>
 				<td>128KB</td>
 			</tr>
