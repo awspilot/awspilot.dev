@@ -129,7 +129,7 @@
 			</tr>
 			<tr>
 				<td>eu-north-1</td>
-				<td>arn:aws:lambda:eu-north-1:452980636694:layer:awspilot-dynamodb-2_0_0-beta:1</td>
+				<td>arn:aws:lambda:eu-north-1:452980636694:layer:awspilot-dynamodb-2_0_0:1</td>
 				<td>Europe (Stockholm)</td>
 				<td>128KB</td>
 			</tr>
