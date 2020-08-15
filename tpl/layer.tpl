@@ -111,7 +111,7 @@
 			</tr>
 			<tr>
 				<td>eu-west-1</td>
-				<td>arn:aws:lambda:eu-west-1:452980636694:layer:awspilot-dynamodb-2_0_0-beta:1</td>
+				<td>arn:aws:lambda:eu-west-1:452980636694:layer:awspilot-dynamodb-2_0_0:1</td>
 				<td>Europe (Ireland)</td>
 				<td>128KB</td>
 			</tr>
