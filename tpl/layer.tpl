@@ -4,7 +4,10 @@
 
 	<h3>Lambda Layers</h3>
 
-	<p></p>
+	<p>
+		Layers for 2.0.1 not yet available.<br>
+		With 2.0.0 you can not do transact().table().update({ attr: undefined }) to delete an attribute.
+	</p>
 
 	<style>
 	.layertable {border-collapse: collapse}
