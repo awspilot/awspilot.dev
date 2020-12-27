@@ -1,6 +1,6 @@
 <div class="content">
 
-<h1>2.0.1</h1>
+<h1>2.0.2</h1>
 support for delete attribute in transaction() update() and insert_or_update()<br>
 console.warn every time schema is not provided and a describeTable is called ( 3.x.x will throw err instead of calling describeTable )<br>
 moved testing from Travis to Github Actions<br>
