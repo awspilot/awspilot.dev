@@ -8,7 +8,8 @@
 
 	<br>
 
-	<a href='https://travis-ci.org/awspilot/dynamodb-oop' target="_blank"><img src='https://travis-ci.org/awspilot/dynamodb-oop.svg?branch=master'/></a>
+
+	<a target="_blank" href="https://github.com/awspilot/dynamodb-oop/workflows/npm%20test/badge.svg"><img src="https://github.com/awspilot/dynamodb-oop/workflows/npm%20test/badge.svg" alt="npm test"></a>
 	<a href='https://badge.fury.io/js/%40awspilot%2Fdynamodb' target="_blank"><img src='https://badge.fury.io/js/%40awspilot%2Fdynamodb.svg' /></a>
 
 	<a href='https://www.npmjs.com/package/@awspilot/dynamodb' target="_blank"><img src='https://img.shields.io/npm/dm/@awspilot/dynamodb.svg?maxAge=2592000' /></a>
