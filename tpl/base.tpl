@@ -16,6 +16,7 @@
 
 	<script src="/js/libs/ractive.min.js"></script>
 	<script src="/js/libs/aws-sdk-2.442.0.min.js"></script>
+	<script src="https://bundle.run/buffer@6.0.3"></script>
 	<script src="/js/libs/dynamodbjs.js"></script>
 
 
