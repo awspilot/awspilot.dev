@@ -27,7 +27,7 @@
 
 	Main library goals are:<br>
 	<li> Compatible with all NodeJS versions ( no ES6+ )
-	<li> Backword compatible with all previous versions
+	<li> Backward compatible with all previous versions
 	<li> Lightweight ( depends only on aws-sdk and promise )
 	<li> Good readability of the code
 
